@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  resources :bookings
+  resources :flights
+  root 'flights#home'
+  resources :companies
+  resources :airportlocs
+  resources :airports
    devise_for :users, controllers: {
         sessions: 'users/sessions'
       }

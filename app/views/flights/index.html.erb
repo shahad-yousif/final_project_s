@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<%= render 'homenave' %>
+<div class="first">
+<h1> Flights schedule</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>From airport</th>
+      <th>To airport</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flights.each do |flight| %>
+      <tr>
+        <td><%= flight.from_airport.full_airport_name %></td>
+        <td><%= flight.to_airport.full_airport_name %></td>
+        <td><%= flight.company_id %></td>
+        <td><%= link_to 'Show', flight %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<%= link_to 'Airport_location', airportlocs_path %>
+
+
+

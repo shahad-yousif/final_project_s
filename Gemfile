@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'activeadmin'
 gem 'geocoder'
 gem 'bootstrap-sass', '3.2.0.2'
 gem 'devise'
